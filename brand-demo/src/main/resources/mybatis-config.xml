@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--起别名使用typeAliases-->
+    <typeAliases>
+        <!--
+            type: 指定别名的类型
+            alias: 指定别名
+        -->
+        <!--<typeAlias type="org.mybatis.example.Blog" alias="blog"/>-->
+        <!--直接使用包解析的方式进行整个包内的数据的起别名-->
+        <package name="com.itheima.pojo"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/><!--使用原版网页上直接导入的mybatis-config会出现版本的错误,但是不会影响运行com.mysql.jdbc.Driver-->
+                <property name="url" value="jdbc:mysql:///db1?useSSL=false&amp;useServerPrepStmts=true"/>
+                <property name="username" value="root"/>
+                <property name="password" value="wjr107024"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--扫描mapper-->
+        <package name="com.itheima.mapper"/>
+    </mappers>
+</configuration>

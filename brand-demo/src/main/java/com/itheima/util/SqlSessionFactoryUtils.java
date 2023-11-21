@@ -9,7 +9,7 @@ import java.io.InputStream;
 
 public class SqlSessionFactoryUtils {
 
-    private static SqlSessionFactory sqlSessionFactory;
+    public static SqlSessionFactory sqlSessionFactory;
 
     static {
         //静态代码块会随着类的加载而自动执行，且只执行一次

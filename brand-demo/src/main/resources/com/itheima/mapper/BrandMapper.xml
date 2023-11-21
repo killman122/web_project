@@ -2,6 +2,10 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.itheima.mapper.BrandMapper">
-
+<!--映射文件也可以直接从官网进行复制, 但是需要进行一定的修改-->
+<mapper namespace="com.itheima.mapper.BrandMapper"><!--注意这里的报错只需要将mapper中的接口创建即可解决, 当然也可以直接创建类, 但是直接创建了不一定都是抽象方法的集合-->
+    <resultMap id="brandResultMap" type="brand">
+        <result column="brand_name" property="brandName"/>
+        <result column="company_name" property="companyName"/>
+    </resultMap>
 </mapper>
