@@ -9,6 +9,9 @@
     <title>Title</title>
 </head>
 <body>
+
+<h1>${login_user.username}</h1>
+
 <input type="button" value="新增" id="add"><br><%--这里为按钮设置id的作用是可以通过id标识按键再通过js代码实现提交表单--%>
 <hr>
 <table border="1" cellspacing="0" width="80%">
